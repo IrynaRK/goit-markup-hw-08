@@ -1,0 +1,22 @@
+.logo,
+.footer__logo {
+  padding-bottom: 25px;
+  font-family: ‘Raleway’, sans-serif;
+
+  @include font(700, 26px, 1.19, 0.03em);
+
+  color: var(--accent-color);
+  display: block;
+}
+.logo {
+  padding-top: 25px;
+  padding-right: 93px;
+}
+.logo-accent {
+  &--footer {
+    color: var(--first-color);
+  }
+  &--header {
+    color: #000;
+  }
+}
