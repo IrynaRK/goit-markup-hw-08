@@ -8,9 +8,16 @@
   color: var(--accent-color);
   display: block;
 }
+.footer__logo {
+  display: flex;
+  justify-content: center;
+}
 .logo {
   padding-top: 25px;
   padding-right: 93px;
+  @include desktop {
+    padding-top: 35px;
+  }
 }
 .logo-accent {
   &--footer {

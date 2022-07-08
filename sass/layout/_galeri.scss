@@ -1,5 +1,7 @@
-@media screen and (min-width: 768px) {
-  .galeri {
+.galeri {
+  display: none;
+  @include desktop {
+    display: flex;
     &__list {
       display: flex;
       position: relative;
@@ -16,7 +18,9 @@
       margin-right: 30px;
     }
   }
-  .box {
+}
+.box {
+  @include desktop {
     @include font(700, 14px, 1.14, 0.03em);
 
     text-align: center;

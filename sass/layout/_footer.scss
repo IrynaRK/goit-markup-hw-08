@@ -3,7 +3,12 @@
   padding-top: 60px;
   padding-bottom: 60px;
   & .container {
-    //display: flex;
+    @include desktop {
+      display: flex;
+      justify-content: space-around;
+      padding-left: auto;
+      padding-right: auto;
+    }
   }
 
   &__link {
@@ -12,7 +17,15 @@
     margin-bottom: 9px;
   }
   &__content {
-    margin-right: 70px;
+    @include desktop {
+      margin-right: 70px;
+    }
+  }
+}
+@include tablet {
+  .footer-tablet {
+    display: flex;
+    justify-content: space-around;
   }
 }
 
@@ -29,7 +42,10 @@
     color: var(--accent-color);
   }
 }
-
+.footer-adress {
+  display: flex;
+  justify-content: center;
+}
 .footer-adress__link {
   color: rgba(255, 255, 255, 0.6);
 
@@ -43,9 +59,12 @@
 
     color: var(--first-color);
     padding-top: 12px;
+    display: flex;
+    justify-content: center;
   }
   &__list {
     display: flex;
+    justify-content: center;
   }
   &__item {
     width: 44px;
@@ -76,11 +95,29 @@
   }
 }
 .footer-subscribe {
-  margin-left: 93px;
+  @include desktop {
+    margin-left: 93px;
+  }
   &__form {
-    //display: flex;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    @include desktop {
+      display: flex;
+      margin-top: 20px;
+    }
   }
   &__title {
+    justify-content: center;
+    display: flex;
+    @include tablet {
+      margin-top: 60px;
+    }
+    @include desktop {
+      justify-content: start;
+      margin-top: 0;
+    }
+
     @include font(700, 14px, 1.14, 0.03em);
 
     text-transform: uppercase;
@@ -88,9 +125,20 @@
     color: var(--first-color);
     margin-bottom: 20px;
   }
+
   &__input {
-    width: 358px;
+    width: 100%;
     height: 50px;
+    @include tablet {
+      width: 450px;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    @include desktop {
+      width: 358px;
+      margin-right: 12px;
+    }
     background-color: transparent;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -98,7 +146,6 @@
     border-radius: 4px;
     padding-left: 16px;
     padding-right: 16px;
-    margin-right: 12px;
 
     color: var(--first-color);
     &::placeholder {
@@ -107,23 +154,30 @@
       color: rgba(255, 255, 255, 0.6);
     }
   }
-}
+  &__submit-btn {
+    background: var(--accent-btn-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    @include font(700, 16px, 1.87, 0.03em);
 
-.footer-subscribe__submit-btn {
-  background: var(--accent-btn-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+    color: var(--first-color);
 
-  @include font(700, 16px, 1.87, 0.03em);
-
-  color: var(--first-color);
-  //display: flex;
-  align-items: center;
-  padding-left: 25px;
-  padding-right: 25px;
-  justify-content: space-around;
-}
-.footer-subscribe__submit-icon {
-  fill: var(--first-color);
-  margin-left: 10px;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    justify-content: space-around;
+    @include desktop {
+      margin-top: 0;
+    }
+  }
+  &__submit-icon {
+    fill: var(--first-color);
+    margin-left: 10px;
+  }
 }

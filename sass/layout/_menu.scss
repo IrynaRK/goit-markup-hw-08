@@ -1,18 +1,25 @@
 .menu {
   display: flex;
+  flex-wrap: wrap;
+  // margin-bottom: 40px;
   &__content {
-    @media screen and (min-widht: 1200px) {
+    display: flex;
+    @include tablet {
       display: flex;
       justify-content: center;
-
       margin-bottom: 50px;
     }
-    @media screen and (min-widht: 768px) {
-    }
-    @media screen and (min-widht: 480px) {
-      display-wrap: wrap;
-      width: calc(100% / 3);
-      justify-content: start;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flax-start;
+  }
+  &__item {
+    margin-bottom: 15px;
+
+    @include desktop {
+      margin-bottom: 0;
     }
   }
   &__btn {
@@ -38,7 +45,7 @@
   }
 }
 .menu__item + .menu__item {
-  margin-left: 8px;
+  margin-right: 8px;
 }
 button.current {
   background: var(--accent-btn-color);

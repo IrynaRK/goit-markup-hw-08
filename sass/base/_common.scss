@@ -1,16 +1,14 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
-@media screen and (min-width: 1200px) {
+
+.section {
+  padding: 60px 0;
+}
+
+@include desktop {
   .section {
     padding: 94px 15px;
-  }
-}
-@media screen and (min-width: 768px) {
-}
-@media screen and (min-width: 480px) {
-  .section {
-    padding-top: 60px;
   }
 }
 
