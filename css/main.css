@@ -590,6 +590,7 @@ a.current {
   .galeri__list {
     display: flex;
     position: relative;
+    justify-content: space-between;
   }
   .galeri__title {
     font-weight: 700;
@@ -1010,16 +1011,13 @@ a.current {
 }
 .portfolio img {
   width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .portfolio img {
+  height: 100%;
+  /*@include tablet {
     width: 100%;
   }
-}
-@media screen and (min-width: 1200px) {
-  .portfolio img {
-    width: 370px;
-  }
+  @include desktop {
+    width: 100%;
+  }*/
 }
 @media screen and (min-width: 768px) {
   .portfolio__list {
