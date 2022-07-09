@@ -1,0 +1,95 @@
+.btn-menu-mob,
+.mob-menu__close {
+  border: none;
+  background-color: transparent;
+  display: block;
+  margin-left: auto;
+}
+.btn-menu-mob {
+  @include tablet {
+    display: none;
+  }
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #ffff;
+  width: 100vw;
+  height: 100vh;
+
+  padding: 21px 25px 48px 40px;
+  &__close {
+    padding: 0;
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  &__link {
+    @include font(500, 40px, 1.18, 0.02em);
+    color: var(--main-color);
+  }
+  &__item {
+    margin-right: 20px;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+.conect-menu {
+  margin-top: 40px;
+
+  &__tel {
+    margin-bottom: 20px;
+  }
+  &__tel-link {
+    @include font(500, 34px, 1.18, 00.02em);
+
+    color: var(--accent-color);
+  }
+  &__mail-link {
+    @include font(500, 24px, 1.16, 00.02em);
+    color: var(--second-color);
+  }
+}
+.mob-soc {
+  display: flex;
+  margin-top: 64px;
+  position: relative;
+
+  &__link {
+    @include font(500, 18px, 1.22, 0.02em);
+    color: var(--accent-color);
+  }
+  &__item {
+    margin-right: 20px;
+
+    &:not(:last-child) .mob-soc__link {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background-color: rgba(33, 33, 33, 0.2);
+        top: 0;
+        right: -11px;
+
+        //order: 1px solid rgba(33, 33, 33, 0.2);
+        //transform: rotate(90deg);
+      }
+    }
+  }
+}
